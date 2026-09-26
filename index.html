@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo para ti ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fondo de gatitos interactivo (Capa trasera) -->
+    <div id="contenedor-gatitos"></div>
+
+    <!-- Música de fondo: Iris de Goo Goo Dolls (se activa al dar clic en continuar) -->
+    <audio id="musicaFondo" loop>
+        <source src="iris.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PANTALLA 1: Bienvenida -->
+    <div id="pantalla1" class="pantalla activa">
+        <h1>Hola, tengo algo especial para ti... ¿Cuál es tu nombre?</h1>
+        <input type="text" id="inputNombre" placeholder="Escribe tu nombre aquí...">
+        <a href="#" class="boton-link" onclick="iniciarExperiencia(); return false;">Continuar ✨</a>
+    </div>
+
+    <!-- PANTALLA 2: La Validación Especial -->
+    <div id="pantalla2" class="pantalla">
+        <h1>¿Eres tú, <span id="nombreUsuario"></span>? 🥰</h1>
+        <p class="subtitulo">"Bienvenida solo por ser tú... todo esto es por ti, para ti y pensando en ti"</p>
+        <div class="botones-contenedor">
+            <button onclick="siguientePantalla(2, 4)">Sí, soy yo ❤️</button>
+            <button id="btnNo" onmouseover="moverBotonNo()">No, no soy 🙄</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA 3: Nuestro Tiempo Juntos -->
+     <div id="pantalla3" class="pantalla">
+        <h2>⏳ Nuestro Tiempo Juntos</h2>
+        <p>Cada segundo a tu lado ha sido un regalo del universo...</p>
+        <div id="contador">
+            <div class="tiempo-bloque"><span id="dias"></span><p>Días</p></div>
+            <div class="tiempo-bloque"><span id="horas">00</span><p>Horas</p></div>
+            <div class="tiempo-bloque"><span id="minutos">00</span><p>Min.</p></div>
+            <div class="tiempo-bloque"><span id="segundos">00</span><p>Seg.</p></div>
+        </div>
+        <button onclick="siguientePantalla(3, 4)">Ver qué más sigue 👀</button>
+    </div>
+
+    <!-- PANTALLA 4: El Principito - El Dilema del Tiempo -->
+    <div id="pantalla4" class="pantalla">
+        <h2>🦊 El secreto del zorro</h2>
+        <p class="frase">"Fue el tiempo que pasaste con tu rosa lo que la hizo tan importante."</p>
+        <p>A veces el mundo va demasiado rápido, pero cuando estoy contigo, el tiempo se detiene. ¿Sabías que desde que te conocí mi mundo cambió por completo?</p>
+        <button onclick="siguientePantalla(4, 5)">Cuéntame más... 🌹</button>
+    </div>
+
+    <!-- PANTALLA 5: El Principito - Lo Esencial -->
+    <div id="pantalla5" class="pantalla">
+        <h2>✨ Lo invisible a los ojos</h2>
+        <p class="frase">"Solo con el corazón se puede ver bien; lo esencial es invisible a los ojos."</p>
+        <p>No te quiero por cómo te ves o por lo que dices. Te quiero por la chispa única que tienes dentro, esa que nadie más puede ver pero que a mí me ilumina todos los días.</p>
+        <button onclick="siguientePantalla(5, 6)">Siguiente página ➡️</button>
+    </div>
+
+    <!-- PANTALLA 6: La Carta de Amor Detallada -->
+    <div id="pantalla6" class="pantalla">
+        <h2>✍️ Mi Carta para Ti</h2>
+        <div class="texto-carta">
+            <p>Querida <span class="nombre-carta"></span>,</p>
+            <p>Esto fue hecho pensando en ti, porque no encontraba otra forma de contener todo lo que significas para mí. Eres mi rosa en un universo lleno de millones de estrellas iguales.</p>
+            <p>Me encantas por cómo eres, por tus risas, tus momentos y tu forma tan única de ver la vida. Prometo cuidar de nosotros como el Principito cuidaba su rosa.</p>
+            <p>Gracias por existir y por cruzarte en mi camino.</p>
+        </div>
+        <button onclick="siguientePantalla(6, 7)">Un último mensaje 💖</button>
+    </div>
+
+    <!-- PANTALLA 7: Cierre Romántico Perpetuo -->
+    <div id="pantalla7" class="pantalla">
+        <h1>Contigo lo tengo todo. 🐈‍⬛❤️</h1>
+        <p>Espero haberte sacado una sonrisa. Gracias por regalarme estos minutos de tu tiempo yo se que tienes una agenda muy ocupada,por eso gracias (eres bot)</p>
+        <p class="frase">"Te quiero un montonnnn... eres mi princesa favorita<br>
+        psdt: no tengo mas princesas, vos sos la unica e inigualableeee🙄🙄."</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
